@@ -28,6 +28,7 @@ export const HeroScreen = () => {
                 <img src={imgPath} alt={superhero} className='img-thumbnail' />
             </div>
             <div className='col-8'>
+                <h1>{id}</h1>
                 <h3>{superhero}</h3>
                 <ul className='list-group list-group-flush'>
                     <li className='list-group-item'><b>Alter ego: </b>{alter_ego} </li>
