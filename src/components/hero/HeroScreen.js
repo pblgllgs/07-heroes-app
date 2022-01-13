@@ -22,7 +22,6 @@ export const HeroScreen = () => {
 
     const imgPath = `/assets/${heroe.id}.jpg`;
     
-
     return (
         <div className='row mt-5'>
             <div className='col-4'>
