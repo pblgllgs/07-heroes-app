@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { useParams, Navigate, useNavigate } from 'react-router-dom'
 import { getHeroeById } from '../../selectores/getHeroeById';
 
@@ -12,7 +12,9 @@ export const HeroScreen = () => {
 
     const { heroeId } = useParams();
 
-    const heroe = getHeroeById(heroeId);
+    //Asi no se vuelve a llamar la funcion cada vez que se carga la pantalla,
+    // y solo se actualiza si cambia el valor de heroeId
+    const heroe = useMemo(() => getHeroeById(heroeId),[heroeId]);
 
     if (!heroe) {
         return <Navigate to='/' />
