@@ -1,4 +1,4 @@
-import React, { useContext, useReducer } from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { types } from "../../types/types";
 import { AuthContext } from "../../auth/authContext";
