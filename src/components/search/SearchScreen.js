@@ -14,7 +14,9 @@ export const SearchScreen = () => {
     const initialState = {
         searchText: q,
     };
-    const [{ searchText }, handleInputChange, reset] = useForm(initialState);
+
+    //no se trae el reset
+    const [{ searchText }, handleInputChange] = useForm(initialState);
 
     const heroesFiltrados = useMemo(() => getHeroesByName(q),[q]);
 
