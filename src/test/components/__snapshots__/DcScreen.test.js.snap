@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pruebas en <DcScreen /> comparar contra el snapshoot 1`] = `
+<div>
+  <h1>
+    DC Heroes
+  </h1>
+  <hr />
+  <HeroList
+    publisher="DC Comics"
+  />
+</div>
+`;
