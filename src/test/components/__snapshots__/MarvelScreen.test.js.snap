@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pruebas en <MarvelScreen /> comparar con snapshot 1`] = `
+<div>
+  <h1>
+    Marvel Heroes
+  </h1>
+  <hr />
+  <HeroList
+    publisher="Marvel Comics"
+  />
+</div>
+`;
