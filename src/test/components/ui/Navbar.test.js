@@ -1,5 +1,5 @@
 import { mount } from "enzyme";
-import { MemoryRouter,Routes, Route } from "react-router-dom";
+import { MemoryRouter, Routes, Route } from "react-router-dom";
 import { AuthContext } from "../../../auth/authContext";
 import { Navbar } from "../../../components/ui/Navbar";
 import { types } from "../../../types/types";
@@ -35,12 +35,13 @@ describe("Pruebas en <Navbar />", () => {
     });
 
     test("debe de llamar el logout, llamar el navigate y el dispath con los argumentos", () => {
-
         wrapper.find("button").prop("onClick")();
-        
-        expect(contextValue.dispatch).toHaveBeenCalledWith({ type: types.logout });
-        expect(mockNavigate).toHaveBeenCalledWith("/login", {
-            replace: true,
+
+        expect(contextValue.dispatch).toHaveBeenCalledWith({
+            type: types.logout,
         });
+        expect(mockNavigate).toHaveBeenCalledWith(
+            "/login", { replace: true,}
+        );
     });
 });
