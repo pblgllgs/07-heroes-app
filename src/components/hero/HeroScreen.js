@@ -1,12 +1,10 @@
 import React, { useMemo } from 'react';
 import { useParams, Navigate, useNavigate } from 'react-router-dom';
+import { heroImages } from '../../helpers/heroImages';
 import { getHeroeById } from '../../selectores/getHeroeById';
 
 //importacion estatica
 // import batman from '../../assets/heroes/dc-batman.jpg';
-
-//true, buque en suvdirectorios
-const heroesImages = require.context('../../assets/heroes',true);
 
 export const HeroScreen = () => {
     const navigate = useNavigate();
@@ -34,7 +32,7 @@ export const HeroScreen = () => {
         characters,
     } = heroe;
 
-    const imgPath = heroesImages(`./${id}.jpg`);
+    const imgPath = heroImages(`./${id}.jpg`);
 
     return (
         <div className="row mt-5">
