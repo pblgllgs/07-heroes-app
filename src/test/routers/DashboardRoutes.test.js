@@ -38,8 +38,6 @@ describe("Pruebas en <DashboardRoutes />", () => {
                 </MemoryRouter>
             </AuthContext.Provider>
         );
-        console.log(wrapper.html());
-
         //comparamos con el snapshot
         expect(wrapper).toMatchSnapshot();
         //esperamos que dentro del componente se encuentre un elemento text-info con el valor de Pablo

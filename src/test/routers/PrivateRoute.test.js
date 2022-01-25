@@ -46,7 +46,6 @@ describe('pruebas en <PrivateRoute />', () => {
                 </MemoryRouter>
             </AuthContext.Provider>
         );
-        console.log(wrapper.html());
         expect(wrapper.text()).toBe('Saliendo de aqui');
     });
 });
