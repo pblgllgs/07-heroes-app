@@ -1,7 +1,7 @@
 import { MemoryRouter } from "react-router-dom";
-const { mount } = require("enzyme");
-const { AuthContext } = require("../../auth/authContext");
-const { DashboardRoutes } = require("../../routers/DashboardRoutes");
+import { mount } from "enzyme";
+import { AuthContext } from "../../auth/authContext";
+import { DashboardRoutes } from "../../routers/DashboardRoutes";
 
 describe("Pruebas en <DashboardRoutes />", () => {
     //creamos un contexto valido para rutas privadas
@@ -17,7 +17,7 @@ describe("Pruebas en <DashboardRoutes />", () => {
         //capturamos el componente montado, paramos el contexto
         const wrapper = mount(
             <AuthContext.Provider value={contextValue}>
-                <MemoryRouter initialEntries={['/']}>
+                <MemoryRouter initialEntries={["/"]}>
                     <DashboardRoutes />
                 </MemoryRouter>
             </AuthContext.Provider>
@@ -39,7 +39,7 @@ describe("Pruebas en <DashboardRoutes />", () => {
             </AuthContext.Provider>
         );
         console.log(wrapper.html());
-        
+
         //comparamos con el snapshot
         expect(wrapper).toMatchSnapshot();
         //esperamos que dentro del componente se encuentre un elemento text-info con el valor de Pablo
