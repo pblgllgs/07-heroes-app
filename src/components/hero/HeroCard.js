@@ -1,7 +1,7 @@
-
-
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
+
+const heroesImages = require.context('../../assets/heroes', true);
 
 export const HeroCard = ({
     id,
@@ -9,10 +9,9 @@ export const HeroCard = ({
     publisher,
     alter_ego,
     first_appearance,
-    characters
+    characters,
 }) => {
-
-    const imagePath = `/assets/${id}.jpg`;
+    const imagePath = heroesImages(`./${id}.jpg`);
 
     return (
         <div className="col animate__animated animate__fadeIn">
@@ -47,4 +46,4 @@ export const HeroCard = ({
             </div>
         </div>
     );
-}
+};
